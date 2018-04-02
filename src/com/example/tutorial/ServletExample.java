@@ -29,15 +29,15 @@ public class ServletExample extends HttpServlet {
 	 */
 	// this method handles all the request and responses to the client
 	// request= we request the data that was typed in my the client
-	// reappnce= sends back data
+	// response= sends back data
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
 		//PrintWriter out = response.getWriter();
 		
-		//give servilet the abilityto manage the jsp pages
+		//give Servlet the ability to manage the jsp pages
  
-		//if firstname is empty or lasname is epty we get index.jsp page back
+		//if firstname is empty or lasname is empty we get index.jsp page back
 		if(request.getParameter("firstname")=="" || request.getParameter("lastname")==""){
 		getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
 		return;
